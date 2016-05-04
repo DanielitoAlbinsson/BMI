@@ -16,7 +16,7 @@ BMICalculator.prototype.metric_bmi = function(obj) {
     var height = obj.height;
     if (weight > 0 && height > 0) {
       var finalBmi = (weight * 703) / (height * height);
-      obj.bmiValue = parselFloat(finalBmi.tofixed(2));
+      obj.bmiValue = parseFloat(finalBmi.toFixed(2));
       setBMIMessage(obj);
     }
   }
